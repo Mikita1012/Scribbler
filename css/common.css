@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.headerPart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading {
+    font-family: "Montez", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: blue;
+}
+
+.subheading {
+    margin-top: 100px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal
+}
+
+.btnCenter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* -ms-transform: translateY(-50%);
+    transform: translateY(-50%, -50%); */
+}
+
+/* MODAL CSS */
+/* The Modal (background) */
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.createModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Take up full width of the viewport */
+    height: 100%;
+    /* Take up full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    overflow: auto;
+    /* Allow scrolling if modal content exceeds viewport */
+}
