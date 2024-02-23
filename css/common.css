@@ -13,9 +13,16 @@ body {
 
 .heading {
     font-family: "Montez", cursive;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     color: blue;
+
+}
+
+.modalHeading {
+    color: gray;
+    font-weight: bolder;
+    font-style: oblique;
 }
 
 .subheading {
@@ -87,17 +94,3 @@ body {
     cursor: pointer;
 }
 
-.createModal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Take up full width of the viewport */
-    height: 100%;
-    /* Take up full height of the viewport */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
-    overflow: auto;
-    /* Allow scrolling if modal content exceeds viewport */
-}

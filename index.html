@@ -51,9 +51,9 @@
     <div class="modal fade" id="signUpModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="signUpModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="model-content">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="signUpModalLabel">Get Started</h3>
+                    <h3 class="modal-title modalHeading" id="signUpModalLabel">Get Started</h3>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -82,21 +82,19 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success btn-md col-12 center" onclick="newUser()">Sign
-                        Up</button>
+                    <button type="submit" class="btn btn-success btn-md col-12 center">Sign Up</button>
                 </div>
-
             </div>
         </div>
     </div>
 
     <!-- SIGN IN MODAL -->
-    <div class="modal fade createModal" id="signInModal" data-keyboard="false" tabindex="-1" aria-labelledby="signInModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="signInModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="signInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="signInModalLabel">Welcome Back!</h3>
+                    <h3 class="modal-title modalHeading" id="signInModalLabel">Welcome Back!</h3>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -133,7 +131,7 @@
     <div class="modal fade" data-backdrop="static" id="createPostModal" data-keyboard="false" tabindex="-1"
         aria-labelledby="createPostModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content" >
+            <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title" id="createPostModalLabel">Pen Your Post</h3>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
@@ -148,15 +146,16 @@
                         <div class="mb-3">
                             <label for="contents" class="form-label">Contents</label>
                             <textarea class="form-control" name="contents" id="contents"
-                                placeholder="Enter the contents of your post" required style="height: 150px;"></textarea>
-                            
+                                placeholder="Enter the contents of your post" required
+                                style="height: 150px;"></textarea>
+
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-success">Create</button>
                 </div>
-                
+
             </div>
         </div>
     </div>
