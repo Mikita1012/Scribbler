@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff !important;
+    margin: 0;
+}
+
+.headerPart {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.heading {
+    font-family: "Montez", cursive;
+    font-style: normal;
+    color: blue;
+}
+
+
+.signUpBtn,
+.signInBtn {
+    color: white;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+}
+
+.subTitle {
+    display: flex;
+    justify-items: end;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.editSaveBtn {
+    background-color: #fc2d59;
+    border: none;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 1px;
+}
+
+.postContent {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.likeButton {
+    background-color: #fc2d59;
+    border: none;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 1px;
+}
+
+.likeButton:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

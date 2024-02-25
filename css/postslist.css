@@ -107,7 +107,39 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.fa-ellipsis:hover{
+    cursor: pointer;
+    
+}
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    /* width: 120px; */
+    /* background-color: black; */
+    color: #fff;
+    font-size: x-small;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .ellipsisClass {
+    color: black;
+
+  }
 
 @media screen and (max-width: 768px) {
     .card {
