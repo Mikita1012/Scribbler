@@ -45,15 +45,16 @@ function redirectToPostPage(anchorTag) {
     // Get the card header text
     var author = anchorTag.closest('.card').querySelector('.card-header').innerText;
     localStorage.setItem('postTitle', author);
-    window.location.href = anchorTag.href;
 
-    var title = anchorTag.closest('.card-content').querySelector('.titlePart').innerText;
+
+    // var title = anchorTag.closest('.card-content').innerText;
+    var title = anchorTag.closest('.card').querySelector('.card-content').innerText;
     localStorage.setItem('titlePart', title);
 
-    var content = anchorTag.closest('.card-content').querySelector('.content').innerText;
-    localStorage.setItem('content', content);
+    var content = anchorTag.closest('.card-content').querySelector('#content');
+    localStorage.setItem('contentP', content);
 
-
+    window.location.href = anchorTag.href;
 
 
 

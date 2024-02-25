@@ -36,13 +36,13 @@
     </header>
 
     <div class="container">
-        <h2 id="title" class="text-center"></h2>
-        <div class="subTitle ">
+        <h3 id="titleID" class="text-center"></h3>
+        <div class="subTitle">
             <h5 id="author" class="font-monospace fw-bold"></h5>
             <button class="editSaveBtn">Save <i class="fa-solid fa-floppy-disk"></i></button>
         </div>
 
-        <p class="content"></p>
+        <p id="content"></p>
         <button class="likeButton" onclick="likeCounter()"><i class="fa-solid fa-thumbs-up"></i> Like</button>
         <div id="likeMessage"></div>
         <br />
@@ -81,17 +81,13 @@
         var author = localStorage.getItem('postTitle');
         document.getElementById('author').innerText = author;
 
-        // var title = localStorage.getItem('titleP')
-        // console.log(title);
-
-        // var title = localStorage.getItem('titleP');
         var title = localStorage.getItem('titlePart');
         // console.log(title);
-        document.getElementById('title').innerText = title; // Display the title on the page.
+        document.getElementById('titleID').innerText = title; // Display the title on the page.
 
-        var content = localStorage.getItem('content');
-        // console.log(title);
-        document.getElementsByClassName('content').innerText = content; // Display the title on the page
+        var content = localStorage.getItem('contentP');
+        console.log(content);
+        document.getElementById('content').innerText = content; // Display the title on the page
 
 
 
