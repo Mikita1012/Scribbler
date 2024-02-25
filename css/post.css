@@ -46,7 +46,7 @@ body {
     border-radius: 1px;
 }
 
-.postContent {
+.postContentClass {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -59,8 +59,41 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 1px;
+    font-weight: bolder;
 }
 
 .likeButton:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+#likeMessage {
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+    font-variation-settings:
+        "wdth" 100;
+    font-variant: small-caps;
+    color: #948e8e;
+
+
+}
+
+#addEventNames {
+    width: 100%;
+    padding: 4px;
+    background-color: #c0bfbf;
+    margin-top: 20px;
+}
+
+#commentSectionPara {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    color: black;
+    border: 1px solid #7b4040; /* Example border */
+    padding: 10px; /* Example padding */
+    border-radius: 5px; /* Example border radius */
+}
+

@@ -4,27 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TODO: Include Font Awesome file here -->
+    <!-- Include Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         crossorigin="anonymous">
-    <!-- TODO: Include Google Fonts file here -->
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Include Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montez&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-    <title>Document</title>
+    <title>Post</title>
     <link rel="stylesheet" href="/css/post.css">
-
-
 </head>
 
 <body>
@@ -36,49 +31,68 @@
         <div>
             <button type="button" id="signUp" class="signUpBtn" data-toggle="modal" data-target="#signUpModal">Sign
                 Up</button>
-
             <button id="signIn" class="signInBtn" data-toggle="modal" data-target="#signInModal">Sign In</button>
         </div>
     </header>
 
     <div class="container">
-        <h3 class="text-center">Title of the Post</h3>
-        <div class="subTitle">
-            <h5>Author name</h5>
+        <h2 id="title" class="text-center"></h2>
+        <div class="subTitle ">
+            <h5 id="author" class="font-monospace fw-bold"></h5>
             <button class="editSaveBtn">Save <i class="fa-solid fa-floppy-disk"></i></button>
         </div>
 
-        <p class="postContent">Contents of Post</p>
+        <p class="content"></p>
         <button class="likeButton" onclick="likeCounter()"><i class="fa-solid fa-thumbs-up"></i> Like</button>
         <div id="likeMessage"></div>
-
-        
+        <br />
+        <textarea name="" id="userComments" cols="100" rows="2" placeholder="Leave a comment..."></textarea>
+        <br />
+        <button type="submit" onclick="addComment()" id="addList" class="likeButton">Comment</button>
+        <br /><br /><br />
+        <p style="font-weight: bold;">All Comments</p>
+        <div id="addEventNames"></div>
     </div>
 
-    <script>        
-function likeCounter() {
-    // Check if session storage variable exists
-    let likes = sessionStorage.getItem('likes');
-    if (likes === null) {
-        // If it doesn't exist, initialize it with 1
-        likes = 1;
-        // Update like message for the first time
-        document.getElementById('likeMessage').textContent = `${likes} person likes this!`;
-        // Update like button text
-        // document.getElementById('likeButton').textContent = 'Liked!';
-    } else {
-        // If it exists, increment it by 1
-        likes++;
-        // Update like message for subsequent likes
-        document.getElementById('likeMessage').textContent = `${likes} people like this!`;
-    }
-    // Store the updated number of likes in session storage
-    sessionStorage.setItem('likes', likes);
-}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function likeCounter() {
+            let likes = localStorage.getItem('likes');
+            if (likes === null) {
+                likes = 1;
+                document.getElementById('likeMessage').textContent = `${likes} person likes this!`;
+            } else {
+                likes++;
+                document.getElementById('likeMessage').textContent = `${likes} people like this!`;
+            }
+            localStorage.setItem('likes', likes);
+        }
 
+        function addComment() {
+            let userComments = document.getElementById('userComments');
+            let comment = '<br/> <p id="commentSectionPara">' + userComments.value + '</p> ';
+            let container = document.getElementById('addEventNames');
+            container.insertAdjacentHTML('afterbegin', comment);
+            userComments.value = ""; // Reset the input field
+        }
 
+        var author = localStorage.getItem('postTitle');
+        document.getElementById('author').innerText = author;
 
-        
+        // var title = localStorage.getItem('titleP')
+        // console.log(title);
+
+        // var title = localStorage.getItem('titleP');
+        var title = localStorage.getItem('titlePart');
+        // console.log(title);
+        document.getElementById('title').innerText = title; // Display the title on the page.
+
+        var content = localStorage.getItem('content');
+        // console.log(title);
+        document.getElementsByClassName('content').innerText = content; // Display the title on the page
+
 
 
     </script>

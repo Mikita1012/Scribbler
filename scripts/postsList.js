@@ -40,7 +40,29 @@ function showDeleteModal(trashIcon) {
 }
 
 
-function showContent(titlePart) {
-    var content = document.getElementById('titlePart')
-    console.log(titlePart.value);
-} 
+
+function redirectToPostPage(anchorTag) {
+    // Get the card header text
+    var author = anchorTag.closest('.card').querySelector('.card-header').innerText;
+    localStorage.setItem('postTitle', author);
+    window.location.href = anchorTag.href;
+
+    var title = anchorTag.closest('.card-content').querySelector('.titlePart').innerText;
+    localStorage.setItem('titlePart', title);
+
+    var content = anchorTag.closest('.card-content').querySelector('.content').innerText;
+    localStorage.setItem('content', content);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
