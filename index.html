@@ -51,7 +51,7 @@
                     <h3 class="modal-title modalHeading" id="signUpModalLabel">Get Started</h3>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <form action="submit">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="name" id="floatingInput" placeholder="Name"
@@ -75,16 +75,30 @@
                         </div>
 
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success btn-md col-12 center">Sign Up</button>
+                </div> -->
+                <div class="modal-body">
+                    <form>
+                        <!-- <h1>Signup Page <a href="login.html" class="loginHeading">or Login</a></h1> -->
+                        <label class="form-label">Name</label>
+                        <input class="form-control"  type="text" placeholder="eg., John" required> <br/>
+                        <label class="form-label">Username</label>
+                        <input class="form-control" type="text" placeholder="eg., test@upgrad.com" required> <br/>
+                        <label class="form-label" id="password" >Password</label>
+                        <input class="form-control" type="password" required> <br/>
+                        <label class="form-label">Confirm Password</label>
+                        <input class="form-control" type="password" required> <br/>
+                        
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success btn-md col-12 center">Sign Up</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- SIGN IN MODAL -->
-    <div class="modal fade" id="signInModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="signInModal" data-keyboard="false" tabindex="-1"
         aria-labelledby="signInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -93,17 +107,11 @@
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="username" id="floatingInput"
-                                placeholder="Username" required />
-                            <label for="floatingInput">Username</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="password" id="floatingInput"
-                                placeholder="Password" required />
-                            <label for="floatingInput">Password</label>
-                        </div>
+                    <form>
+                        <label class="form-label">Username</label>
+                        <input class="form-control" type="text" placeholder="eg., John_10" required> <br/>
+                        <label class="form-label" id="password" >Password</label>
+                        <input class="form-control" type="password" required> <br/>
                     </form>
                 </div>
                 <div class="modal-footer">
